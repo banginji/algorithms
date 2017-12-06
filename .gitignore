@@ -1,0 +1,5 @@
+.idea/
+*.*~
+algos/
+*DS_Store*
+*pycache*
