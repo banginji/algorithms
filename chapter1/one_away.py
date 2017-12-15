@@ -1,3 +1,4 @@
+# Does not work for edge cases; ex: abb, bbbb
 def one_char_away(str1, str2):
     one_diff = False
     if len(str1) == len(str2):
