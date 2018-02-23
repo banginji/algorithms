@@ -9,4 +9,4 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "\n\nHello World!\n\n"
+    return "{\"message\": \"Hello World!\"}"
