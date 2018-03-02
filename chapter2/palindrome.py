@@ -22,7 +22,7 @@ def is_palindrome(list):
 
 
 if __name__ == '__main__':
-    is_palindrome_string = "aabca"
+    is_palindrome_string = ""
     is_palindrome_list = LinkedList.SingleLinkedList()
     is_palindrome_list.add_array_of_elements(is_palindrome_string)
     is_palindrome_list.print_list()
