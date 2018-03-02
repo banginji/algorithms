@@ -1,5 +1,4 @@
 from datastructures import stack
-from sys import maxsize
 
 
 class MinStack(stack.Stack):
