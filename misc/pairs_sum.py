@@ -1,5 +1,8 @@
+import timeit
+
+
 def pairs_with_list_comprehension(arr, sum):
-    return [(x, y) if x + y == sum else (x, y, 0) for idx_x, x in enumerate(arr) for y in arr[idx_x+1:]]
+    return [{x, y} for idx_x, x in enumerate(arr) for y in arr[idx_x+1:] if x + y == sum]
 
 
 def pairs(arr, sum):
@@ -22,4 +25,19 @@ def pairs(arr, sum):
 
 
 if __name__ == '__main__':
+    print(pairs_with_list_comprehension([5, 2, 4, 7, 3, 18, -9, 1, 53, 11, 8, 6], 9))
+    # t = timeit.Timer("pairs_with_list_comprehension([5, 2, 4, 7, 3, 18, -9, 1, 53, 11, 8, 6], 9)", "from __main__ import pairs_with_list_comprehension")
+    # time = t.timeit()
+    # print(f"pairs_with_list_comprehension -----> {time}")
+
     print(pairs([5, 2, 4, 7, 3, 18, -9, 1, 53, 11, 8, 6], 9))
+    # t = timeit.Timer("pairs([5, 2, 4, 7, 3, 18, -9, 1, 53, 11, 8, 6], 9)", "from __main__ import pairs")
+    # time = t.timeit()
+    # print(f"pairs -----> {time}")
+
+    # Using lambdas
+    x_arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    y_arr = [4, 6, 8]
+    result_list = list(filter(lambda x: x not in y_arr, x_arr))
+    print(result_list)
+
